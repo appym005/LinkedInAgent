@@ -1,0 +1,12 @@
+{
+  "name": "linkedin-agent",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "build:backend": "npm run build -w @linkedin-agent/backend",
+    "dev:backend": "npm run dev -w @linkedin-agent/backend"
+  }
+}
