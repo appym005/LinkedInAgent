@@ -1,0 +1,9 @@
+{
+  "name": "linkedin-agent",
+  "private": true,
+  "packageManager": "pnpm@10.6.5",
+  "scripts": {
+    "dev": "pnpm --filter web dev",
+    "build": "pnpm --filter web build"
+  }
+}
