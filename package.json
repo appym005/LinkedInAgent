@@ -1,9 +1,15 @@
 {
   "name": "linkedin-agent",
+  "version": "0.1.0",
   "private": true,
-  "packageManager": "pnpm@10.6.5",
+  "workspaces": [
+    "apps/*"
+  ],
   "scripts": {
-    "dev": "pnpm --filter web dev",
-    "build": "pnpm --filter web build"
+    "build": "npm run build --workspaces",
+    "build:backend": "npm run build -w @linkedin-agent/backend",
+    "build:frontend": "npm run build -w @linkedin-agent/frontend",
+    "dev:backend": "npm run dev -w @linkedin-agent/backend",
+    "dev:frontend": "npm run dev -w @linkedin-agent/frontend"
   }
 }
