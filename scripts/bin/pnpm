@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
+
+# Keep npm's cache inside the workspace so WSL/devcontainer shells don't depend
+# on host-owned files under ~/.npm.
+export NPM_CONFIG_CACHE="${NPM_CONFIG_CACHE:-$ROOT_DIR/.npm-cache}"
+
+exec npm exec --yes pnpm@10.17.1 -- "$@"
