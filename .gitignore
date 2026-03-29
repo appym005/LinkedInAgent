@@ -1,2 +1,12 @@
+<<<<<<< HEAD
 .orchestrator/
 linkedin_agent_dev_spec.txt
+=======
+node_modules/
+dist/
+.DS_Store
+coverage/
+.vite/
+.npm-cache/
+*.tsbuildinfo
+>>>>>>> orchestrator/task/inside-the-apps-directory-create-two-sub-17746734
