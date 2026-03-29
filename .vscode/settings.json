@@ -1,0 +1,7 @@
+{
+  "terminal.integrated.cwd": "${workspaceFolder}",
+  "terminal.integrated.env.linux": {
+    "PATH": "${workspaceFolder}/scripts/bin:${env:PATH}",
+    "NPM_CONFIG_CACHE": "${workspaceFolder}/.npm-cache"
+  }
+}
