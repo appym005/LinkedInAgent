@@ -1,15 +1,25 @@
-export default function App() {
+import logo from './logo.svg';
+import './App.css';
+
+function App() {
   return (
-    <main className="app-shell">
-      <section className="hero">
-        <p className="eyebrow">React + TypeScript</p>
-        <h1>Frontend initialized.</h1>
-        <p className="copy">
-          This project is ready for UI development with Vite, React, and
-          TypeScript.
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.tsx</code> and save to reload.
         </p>
-      </section>
-    </main>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
   );
 }
 
+export default App;
