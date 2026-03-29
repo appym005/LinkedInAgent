@@ -1,0 +1,15 @@
+#!/usr/bin/env sh
+set -eu
+
+ROOT_DIR=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+TOOLS_DIR="$ROOT_DIR/.tools"
+CACHE_DIR="$ROOT_DIR/.cache/npm"
+PNPM_VERSION=10.17.1
+PNPM_BIN="$TOOLS_DIR/node_modules/.bin/pnpm"
+
+if [ ! -x "$PNPM_BIN" ]; then
+  mkdir -p "$TOOLS_DIR" "$CACHE_DIR"
+  env NPM_CONFIG_CACHE="$CACHE_DIR" npm install --no-save --prefix "$TOOLS_DIR" "pnpm@$PNPM_VERSION"
+fi
+
+exec "$PNPM_BIN" "$@"

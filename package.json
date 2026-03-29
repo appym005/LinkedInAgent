@@ -3,8 +3,8 @@
   "private": true,
   "packageManager": "pnpm@10.17.1",
   "scripts": {
-    "build": "pnpm --filter api build",
-    "dev": "pnpm --filter api dev",
-    "start": "pnpm --filter api start"
+    "build": "./pnpmw --filter api build",
+    "dev": "./pnpmw --filter api dev",
+    "start": "./pnpmw --filter api start"
   }
 }
