@@ -2,3 +2,4 @@
 linkedin_agent_dev_spec.txt
 node_modules/
 dist/
+.pnpm-store/
