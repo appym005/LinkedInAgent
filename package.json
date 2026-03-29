@@ -1,0 +1,7 @@
+{
+  "name": "linkedin-agent",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ]
+}
