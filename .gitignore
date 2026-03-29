@@ -1,5 +1,8 @@
+.orchestrator/
+linkedin_agent_dev_spec.txt
 node_modules/
-dist/
-coverage/
-.DS_Store
-npm-debug.log*
+.pnpm-store/
+.npm-cache/
+.cache/
+.tools/
+apps/api/dist/
