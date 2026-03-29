@@ -1,9 +1,10 @@
 {
   "name": "linkedin-agent",
   "private": true,
-  "version": "1.0.0",
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ]
+  "packageManager": "pnpm@10.17.1",
+  "scripts": {
+    "build": "pnpm --filter api build",
+    "dev": "pnpm --filter api dev",
+    "start": "pnpm --filter api start"
+  }
 }
