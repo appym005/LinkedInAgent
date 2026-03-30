@@ -8,3 +8,4 @@ npm-debug.log*
 .node_modules*backup*/
 .pnpm-store*backup*/
 apps/*/node_modules*backup*/
+.orchestrator/
