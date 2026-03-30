@@ -1,23 +1,12 @@
 import express from "express";
 
-import {
-  createVertexAgentChatResult,
-  createVertexAgentDefinition
-} from "./vertexAgent.js";
-
 const app = express();
 const port = Number(process.env.PORT ?? 3001);
 
 app.use(express.json());
 
 app.get("/", (_request, response) => {
-  response.send("LinkedInAgent backend is running.");
-});
-
-app.get("/api/agent", (_request, response) => {
-  response.json({
-    agent: createVertexAgentDefinition()
-  });
+  response.send("Hello World");
 });
 
 app.post("/api/chat", (request, response) => {
@@ -30,13 +19,11 @@ app.post("/api/chat", (request, response) => {
     return;
   }
 
-  response.json(createVertexAgentChatResult(message));
+  response.json({
+    reply: `Mock response: ${message}`
+  });
 });
 
 app.listen(port, () => {
-  const agent = createVertexAgentDefinition();
-
-  console.log(
-    `Backend listening on http://localhost:${port} with Vertex agent '${agent.name}' using model '${agent.model}'.`
-  );
+  console.log(`Backend listening on http://localhost:${port}`);
 });
