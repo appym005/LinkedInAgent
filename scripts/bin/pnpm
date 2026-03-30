@@ -2,9 +2,11 @@
 set -euo pipefail
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
+LOCAL_NPM_CACHE="${NPM_CONFIG_CACHE:-${npm_config_cache:-$ROOT_DIR/.npm-cache}}"
 
 # Keep npm's cache inside the workspace so WSL/devcontainer shells don't depend
 # on host-owned files under ~/.npm.
-export NPM_CONFIG_CACHE="${NPM_CONFIG_CACHE:-$ROOT_DIR/.npm-cache}"
+export NPM_CONFIG_CACHE="$LOCAL_NPM_CACHE"
+export npm_config_cache="$LOCAL_NPM_CACHE"
 
-exec npm exec --yes pnpm@10.17.1 -- "$@"
+exec npm exec --yes pnpm@10.25.0 -- "$@"

@@ -3,4 +3,8 @@ dist/
 coverage/
 .DS_Store
 npm-debug.log*
+.npm-cache/
 .pnpm-store/
+.node_modules*backup*/
+.pnpm-store*backup*/
+apps/*/node_modules*backup*/
