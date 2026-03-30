@@ -1,5 +1,6 @@
 import express from "express";
 
+import { authRouter } from "./auth/routes.js";
 import {
   createVertexAgentChatResult,
   createVertexAgentDefinition
@@ -9,6 +10,7 @@ const app = express();
 const port = Number(process.env.PORT ?? 3001);
 
 app.use(express.json());
+app.use("/api/auth", authRouter);
 
 app.get("/", (_request, response) => {
   response.send("LinkedInAgent backend is running.");
